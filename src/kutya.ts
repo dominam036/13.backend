@@ -1,3 +1,5 @@
+import { data } from "./data";
+
 export interface IKutya {
     id:number | null;
     nev:string;
@@ -42,5 +44,11 @@ export default class Kutya {
             kepUrl: this.kepUrl
         }
         return kutya;
+    }
+
+    kutyak(kutyak:IKutya[]): IKutya[] {
+        const dogs:IKutya[] = [];
+        dogs.push(...kutyak);
+        return kutyak;
     }
 }
