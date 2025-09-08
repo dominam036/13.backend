@@ -1,6 +1,6 @@
-import { Kutya } from "./kutya";
+import { IKutya } from "./kutya";
 
-export const data:Kutya[] = [
+export const data:IKutya[] = [
     {
         "id": 1,
         "nev": "Mendy",

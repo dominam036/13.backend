@@ -1,4 +1,5 @@
 import { data } from "./data";
+import Kutya from "./kutya";
 
 const table = document.createElement("table");
 document.body.appendChild(table);
@@ -25,3 +26,6 @@ data.forEach(kutya => {
         tr.appendChild(td);
     })
 })
+
+const kutya : Kutya = new Kutya(data[0]);
+console.log(kutya.kutya());
