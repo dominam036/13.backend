@@ -28,4 +28,4 @@ data.forEach(kutya => {
 })
 
 const kutya : Kutya = new Kutya(data[0]);
-console.log(kutya.kutya());
+console.log(kutya.dog());
