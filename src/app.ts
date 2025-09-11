@@ -1,31 +1,6 @@
 import { data } from "./data";
 import Kutya from "./kutya";
 
-const table = document.createElement("table");
-document.body.appendChild(table);
-const thead = document.createElement("thead");
-table.appendChild(thead);
-const tbody = document.createElement("tbody");
-table.appendChild(tbody);
-
-const trHead = document.createElement("tr");
-thead.appendChild(trHead);
-
-Object.keys(data[0]).forEach(key => {
-    const th = document.createElement("th");
-    th.innerText = key;
-    trHead.appendChild(th);
-});
-
-data.forEach(kutya => {
-    const tr = document.createElement("tr");
-    tbody.appendChild(tr);
-    Object.keys(kutya).forEach(value => {
-        const td = document.createElement("td");
-        td.innerText = kutya[value].toString();
-        tr.appendChild(td);
-    })
-})
-
 const kutya : Kutya = new Kutya(data[0]);
 console.log(kutya.dog());
+console.log(kutya.dogs(data));

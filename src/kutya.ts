@@ -9,14 +9,33 @@ export interface IKutya {
     kepUrl: string | null; 
 }
 
+class Valami{
+    readonly name! : string;
+    x : number;
+    y : number;
+    constructor(x = 0, y = 0){
+        this.name = "Valami";
+        this.x = x;
+        this.y = y;
+    }
+}
 
-export default class Kutya {
-    private id : number | null;
-    private nev : string;
-    private fajta : string;
-    private nem: boolean;
-    private eletkor: number;
-    private kepUrl: string | null; 
+const valami = new Valami(10, 10);
+console.log(valami.x);
+
+export default class Kutya implements IKutya{
+    // private id : number | null;
+    // private nev : string;
+    // private fajta : string;
+    // private nem: boolean;
+    // private eletkor: number;
+    // private kepUrl: string | null; 
+    id : number | null;
+    nev : string;
+    fajta : string;
+    nem: boolean;
+    eletkor: number;
+    kepUrl: string | null;
 
     constructor(dog: IKutya) {
     this.id = dog.id || null;
